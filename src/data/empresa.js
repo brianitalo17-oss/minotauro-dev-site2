@@ -36,30 +36,23 @@ export const empresa = {
   },
   equipe: [
     {
-      nome: "Marco Túlio",
+      nome: "Brian Italo",
       cargo: "CEO e Desenvolvedor Full Stack",
-      foto: "/images/brian.jpg",
-      alt: "Foto de Marco Túlio(Brian)",
-      descricao: "Lidera a visão estratégica da Minotauro Dev e atua diretamente no desenvolvimento completo das aplicações (front-end e back-end)."
-    },
-    {
-      nome: "Will Lan Dafoe",
-      cargo: "Diretor de Tecnologia (CTO)",
-      foto: "/images/will.jpg",
-      alt: "Foto de Will Lan Dafoe",
-      descricao: "Define a arquitetura técnica, escolhe as tecnologias mais adequadas e garante a estabilidade e o desempenho dos sistemas."
+      foto: "/images/brian.png",
+      alt: "Foto de Brian Italo",
+      descricao: "Lidera a visão estratégica e atua diretamente no desenvolvimento das aplicações"
     },
     {
       nome: "Kevin Hash",
       cargo: "Analista de Segurança da Informação",
-      foto: "/images/kevin.jpg",
+      foto: "/images/kevin.png",
       alt: "Foto de Kevin Hash",
       descricao: "Responsável por estruturar e proteger os bancos de dados dos clientes."
     },
     {
       nome: "Lourival Campelo",
       cargo: "Designer UI/UX e Desenvolvedor Front-End",
-      foto: "/images/lourival.jpg",
+      foto: "/images/lourival.jpeg",
       alt: "Foto de Lourival Campelo",
       descricao: "Responsável por estruturar e proteger os bancos de dados dos clientes."
     }
