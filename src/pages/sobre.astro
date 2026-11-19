@@ -1,60 +1,36 @@
-<html lang="pt-BR">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Sobre Nós | Minotauro Dev</title>
-	</head>
-	<body>
-		<header>
-			<strong>Minotauro Dev</strong>
-			<nav>
-				<ul>
-					<li><a href="/">Início</a></li>
-					<li><a href="/sobre">Sobre</a></li>
-					<li><a href="/equipe">Equipe</a></li>
-					<li><a href="/contato">Contato</a></li>
-				</ul>
-			</nav>
-		</header>
+---
+import LayoutBase from '../layouts/LayoutBase.astro';
+import { empresa } from '../data/empresa.js';
+---
 
-		<main>
-			<section>
-				<h1>Sobre a Minotauro Dev</h1>
-				<p>A Minotauro Dev nasceu da união de jovens programadores que se cansaram de ver empresas perdidas em sistemas confusos, lentos e mal feitos. Na mitologia, o minotauro vivia no centro de um labirinto, e foi com essa ideia que nasceu o nome: somos os que dominam o labirinto do código e não recuam diante de um problema. Começamos criando pequenos sistemas para resolver necessidades reais e, com o tempo, passamos a desenvolver aplicações sob medida para negócios de diferentes áreas. Hoje, a Minotauro Dev entrega software forte, seguro e acessível, ajudando cada cliente a encontrar o caminho mais direto para crescer no mundo digital. </p>
-			</section>
+<LayoutBase 
+	titulo="Sobre Nós" 
+	descricao={`Conheça a história e os valores da ${empresa.nome}.`}
+>
+	<section>
+		<h1>Sobre a {empresa.nome}</h1>
+		<p>{empresa.historia}</p>
+	</section>
 
-			<section>
-				<h2>Missão</h2>
-				<p>Desenvolver softwares fortes, seguros e sob medida, que resolvem os problemas reais dos nossos clientes de forma direta e eficiente, para que cada negócio encontre o caminho até o crescimento no mundo digital. </p>
-			</section>
+	<section>
+		<h2>Missão</h2>
+		<p>{empresa.missao}</p>
+	</section>
 
-			<section>
-				<h2>Visão</h2>
-				<p>Ser reconhecida como uma das software houses mais confiáveis e inovadoras do Brasil, referência em sistemas fortes e seguros, que transformam problemas complexos em soluções simples para negócios de todos os tamanhos.</p>
-			</section>
+	<section>
+		<h2>Visão</h2>
+		<p>{empresa.visao}</p>
+	</section>
 
-			<section>
-				<h2>Nossos Valores</h2>
-				<ul>
-					<li>
-						<h3>Força</h3>
-						<p>Entregamos sistemas resistentes, que aguentam o uso real.</p>
-					</li>
-					<li>
-						<h3>Coragem</h3>
-						<p>Enfrentamos qualquer problema de frente, sem recuar. </p>
-					</li>
-					<li>
-						<h3>Segurança</h3>
-						<p>Protegemos os dados e a confiança dos nossos clientes.</p>
-					</li>
-				</ul>
-			</section>
-		</main>
-
-		<footer>
-			<p>&copy; 2026 Minotauro Dev. Todos os direitos reservados.</p>
-		</footer>
-	</body>
-</html>
+	<section>
+		<h2>Nossos Valores</h2>
+		<ul>
+			{empresa.valores.map((valor) => (
+				<li>
+					<h3>{valor.titulo}</h3>
+					<p>{valor.descricao}</p>
+				</li>
+			))}
+		</ul>
+	</section>
+</LayoutBase>
